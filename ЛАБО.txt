@@ -1,0 +1,35 @@
+use BarberShop;
+go
+--create proc sdhdd
+--as
+--begin 
+-- select SFP from Information_Barbers, Services_Barbers 
+-- where Information_Barbers.Services_Barbers_Id = Services_Barbers.Id 
+-- and Services_Barbers.Name = 'традиционное бритье бороды';
+--end
+--exec sdhdd
+
+--create proc select_All_Barbers_By_Service(@string nvarchar(80))
+--as
+--begin 
+-- select SFP from Information_Barbers, Services_Barbers 
+-- where Information_Barbers.Services_Barbers_Id = Services_Barbers.Id 
+-- and Services_Barbers.Name = @string;
+--end
+--exec select_All_Barbers_By_Service @string = 'asdfsdaf'
+	
+--create proc select_All_Barbers_By_Expirience(@num int)
+--as
+--begin 
+	
+-- select SFP from Information_Barbers where DATEDIFF(year, DayOfWork, getdate()) >= @num;
+--end
+--exec select_All_Barbers_By_Expirience @num = 5
+
+--create proc select_All_Barbers_By_Position
+--as
+--begin 	
+--	select SFP from Information_Barbers where Position = 'синьор-барбер' and Position = 'джуниор-барбер';
+--end
+--exec select_All_Barbers_By_Position
+
